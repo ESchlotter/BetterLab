@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D309200FCE35272E0119D86 /* Pods_BetterLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E95112D47C55BBA50A45851 /* Pods_BetterLab.framework */; };
 		1B4DC92B1FC0C17500D7548A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DC92A1FC0C17500D7548A /* AppDelegate.swift */; };
 		1B4DC92D1FC0C17500D7548A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DC92C1FC0C17500D7548A /* ViewController.swift */; };
 		1B4DC9301FC0C17500D7548A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4DC92E1FC0C17500D7548A /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		1B4DC9351FC0C17500D7548A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4DC9331FC0C17500D7548A /* LaunchScreen.storyboard */; };
 		1B4DC9401FC0C17600D7548A /* BetterLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DC93F1FC0C17600D7548A /* BetterLabTests.swift */; };
 		1B4DC94B1FC0C17600D7548A /* BetterLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DC94A1FC0C17600D7548A /* BetterLabUITests.swift */; };
+		3CE35B2CD8BF1B2DC06672BA /* Pods_BetterLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F243D6BD715099000632C4 /* Pods_BetterLabTests.framework */; };
+		F9F352023EF6DBB73A68BCB4 /* Pods_BetterLabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03C50E0EB0A53662E11A7A6B /* Pods-BetterLabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLabUITests/Pods-BetterLabUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B4DC9271FC0C17500D7548A /* BetterLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4DC92A1FC0C17500D7548A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B4DC92C1FC0C17500D7548A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		1B4DC9461FC0C17600D7548A /* BetterLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4DC94A1FC0C17600D7548A /* BetterLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterLabUITests.swift; sourceTree = "<group>"; };
 		1B4DC94C1FC0C17600D7548A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetterLabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		533AFAD66381C28E916B13D1 /* Pods-BetterLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab.debug.xcconfig"; sourceTree = "<group>"; };
+		7DA24824967A0B188F662890 /* Pods-BetterLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab.release.xcconfig"; sourceTree = "<group>"; };
+		8D8A0E8559DF28EAC3418AE8 /* Pods-BetterLabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLabTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLabTests/Pods-BetterLabTests.release.xcconfig"; sourceTree = "<group>"; };
+		95EFBA6F71D1205D96E4DD83 /* Pods-BetterLabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLabUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLabUITests/Pods-BetterLabUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9E95112D47C55BBA50A45851 /* Pods_BetterLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetterLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F243D6BD715099000632C4 /* Pods_BetterLabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetterLabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22D3216E28A421B6CFBD558 /* Pods-BetterLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLabTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLabTests/Pods-BetterLabTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D309200FCE35272E0119D86 /* Pods_BetterLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CE35B2CD8BF1B2DC06672BA /* Pods_BetterLabTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9F352023EF6DBB73A68BCB4 /* Pods_BetterLabUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				1B4DC93E1FC0C17600D7548A /* BetterLabTests */,
 				1B4DC9491FC0C17600D7548A /* BetterLabUITests */,
 				1B4DC9281FC0C17500D7548A /* Products */,
+				94D834C5D447254E3A96A040 /* Pods */,
+				A227DF75326BA8BDD586F841 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = BetterLabUITests;
 			sourceTree = "<group>";
 		};
+		94D834C5D447254E3A96A040 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				533AFAD66381C28E916B13D1 /* Pods-BetterLab.debug.xcconfig */,
+				7DA24824967A0B188F662890 /* Pods-BetterLab.release.xcconfig */,
+				F22D3216E28A421B6CFBD558 /* Pods-BetterLabTests.debug.xcconfig */,
+				8D8A0E8559DF28EAC3418AE8 /* Pods-BetterLabTests.release.xcconfig */,
+				03C50E0EB0A53662E11A7A6B /* Pods-BetterLabUITests.debug.xcconfig */,
+				95EFBA6F71D1205D96E4DD83 /* Pods-BetterLabUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A227DF75326BA8BDD586F841 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E95112D47C55BBA50A45851 /* Pods_BetterLab.framework */,
+				F0F243D6BD715099000632C4 /* Pods_BetterLabTests.framework */,
+				4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B4DC94F1FC0C17600D7548A /* Build configuration list for PBXNativeTarget "BetterLab" */;
 			buildPhases = (
+				F30E5CEA0ED1CD9C1D3539EC /* [CP] Check Pods Manifest.lock */,
 				1B4DC9231FC0C17500D7548A /* Sources */,
 				1B4DC9241FC0C17500D7548A /* Frameworks */,
 				1B4DC9251FC0C17500D7548A /* Resources */,
+				1DBA0F03D90715EF65FFD868 /* [CP] Embed Pods Frameworks */,
+				4559A3434349009171AE6A7E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B4DC9521FC0C17600D7548A /* Build configuration list for PBXNativeTarget "BetterLabTests" */;
 			buildPhases = (
+				DDB51F35A46E322D4DA7440C /* [CP] Check Pods Manifest.lock */,
 				1B4DC9371FC0C17600D7548A /* Sources */,
 				1B4DC9381FC0C17600D7548A /* Frameworks */,
 				1B4DC9391FC0C17600D7548A /* Resources */,
+				818F8663B5B38C3FAEA61EA9 /* [CP] Embed Pods Frameworks */,
+				9E1CEEE77A4CEA9E5568246E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B4DC9551FC0C17600D7548A /* Build configuration list for PBXNativeTarget "BetterLabUITests" */;
 			buildPhases = (
+				BECFEF53167CF63FF766A81F /* [CP] Check Pods Manifest.lock */,
 				1B4DC9421FC0C17600D7548A /* Sources */,
 				1B4DC9431FC0C17600D7548A /* Frameworks */,
 				1B4DC9441FC0C17600D7548A /* Resources */,
+				5EA727B47B2298F0259C03CA /* [CP] Embed Pods Frameworks */,
+				68C07036F5F3CD1EA9464095 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DBA0F03D90715EF65FFD868 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4559A3434349009171AE6A7E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EA727B47B2298F0259C03CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetterLabUITests/Pods-BetterLabUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68C07036F5F3CD1EA9464095 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetterLabUITests/Pods-BetterLabUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		818F8663B5B38C3FAEA61EA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetterLabTests/Pods-BetterLabTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E1CEEE77A4CEA9E5568246E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetterLabTests/Pods-BetterLabTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BECFEF53167CF63FF766A81F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDB51F35A46E322D4DA7440C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F30E5CEA0ED1CD9C1D3539EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B4DC9231FC0C17500D7548A /* Sources */ = {
@@ -415,6 +602,7 @@
 		};
 		1B4DC9501FC0C17600D7548A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 533AFAD66381C28E916B13D1 /* Pods-BetterLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5P8T4HC496;
@@ -428,6 +616,7 @@
 		};
 		1B4DC9511FC0C17600D7548A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DA24824967A0B188F662890 /* Pods-BetterLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5P8T4HC496;
@@ -441,6 +630,7 @@
 		};
 		1B4DC9531FC0C17600D7548A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F22D3216E28A421B6CFBD558 /* Pods-BetterLabTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +646,7 @@
 		};
 		1B4DC9541FC0C17600D7548A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D8A0E8559DF28EAC3418AE8 /* Pods-BetterLabTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +662,7 @@
 		};
 		1B4DC9561FC0C17600D7548A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C50E0EB0A53662E11A7A6B /* Pods-BetterLabUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5P8T4HC496;
@@ -485,6 +677,7 @@
 		};
 		1B4DC9571FC0C17600D7548A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95EFBA6F71D1205D96E4DD83 /* Pods-BetterLabUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5P8T4HC496;
@@ -516,6 +709,7 @@
 				1B4DC9511FC0C17600D7548A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B4DC9521FC0C17600D7548A /* Build configuration list for PBXNativeTarget "BetterLabTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +718,7 @@
 				1B4DC9541FC0C17600D7548A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B4DC9551FC0C17600D7548A /* Build configuration list for PBXNativeTarget "BetterLabUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +727,7 @@
 				1B4DC9571FC0C17600D7548A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

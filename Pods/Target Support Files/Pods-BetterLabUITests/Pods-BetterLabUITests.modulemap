@@ -1,0 +1,6 @@
+framework module Pods_BetterLabUITests {
+  umbrella header "Pods-BetterLabUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
