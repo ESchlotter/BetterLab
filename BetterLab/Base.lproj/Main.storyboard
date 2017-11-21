@@ -25,22 +25,67 @@
                                 <rect key="frame" x="0.0" y="196" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnW-GE-wi8">
+                                <rect key="frame" x="176" y="533" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="H9a-P0-w5n" kind="presentation" identifier="PresentMenuSegue" id="sIp-sz-Rai"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ksQ-5a-2LJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="176" id="58O-u9-Ji5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ksQ-5a-2LJ" secondAttribute="bottom" constant="271" id="Tp4-9v-QLO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cnW-GE-wi8" secondAttribute="bottom" constant="104" id="Wcv-Ap-q31"/>
+                            <constraint firstItem="cnW-GE-wi8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="176" id="ZJT-Ql-667"/>
                             <constraint firstAttribute="trailing" secondItem="ksQ-5a-2LJ" secondAttribute="trailing" id="bX1-RE-UNh"/>
                             <constraint firstItem="ksQ-5a-2LJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o6W-st-7YS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="f8b-vJ-29r"/>
                     <connections>
+                        <outlet property="button" destination="cnW-GE-wi8" id="NGA-H0-7m9"/>
+                        <outlet property="flowingMenuTransitionManager" destination="RsJ-LM-SF6" id="EEm-84-vRE"/>
                         <outletCollection property="chartViews" destination="ksQ-5a-2LJ" collectionClass="NSMutableArray" id="v2U-JV-xpu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="RsJ-LM-SF6" customClass="FlowingMenuTransitionManager" customModule="FlowingMenu"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="113.79310344827587"/>
+            <point key="canvasLocation" x="111" y="177"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="N4U-Di-G2H">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H9a-P0-w5n" customClass="TestViewController" customModule="BetterLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BYU-d6-Qvx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y6K-yp-kuQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zq7-Jv-yhu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcM-8o-HKH">
+                                <rect key="frame" x="164" y="165" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Tc6-LB-hzm" kind="unwind" identifier="DismissMenuSegue" unwindAction="unwindToMainViewController:" id="gsy-n0-8Qk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="bcM-8o-HKH" id="TAH-DO-uOB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="le8-mt-Ukc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Tc6-LB-hzm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="177"/>
         </scene>
     </scenes>
 </document>

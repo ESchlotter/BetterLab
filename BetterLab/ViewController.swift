@@ -8,9 +8,37 @@
 
 import UIKit
 import Charts
+import FlowingMenu
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FlowingMenuDelegate {
     @IBOutlet var chartViews: [LineChartView]!
+    @IBOutlet var button: UIButton!
+    @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
+    var menu: UIViewController?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc                   = segue.destination
+        vc.transitioningDelegate = flowingMenuTransitionManager
+        
+        // Add the left pan gesture to the menu
+        flowingMenuTransitionManager.setInteractiveDismissView(vc.view)
+        
+        // Keep a reference of the current menu
+        menu = vc
+    }
+    
+    // MARK: - FlowingMenu Delegate Methods
+    func flowingMenuNeedsPresentMenu(_ flowingMenu: FlowingMenuTransitionManager) {
+        performSegue(withIdentifier: "PresentMenuSegue", sender: self)
+    }
+    
+    func flowingMenuNeedsDismissMenu(_ flowingMenu: FlowingMenuTransitionManager) {
+        menu?.performSegue(withIdentifier: "DismissMenuSegue", sender: self)
+    }
+    
+    @IBAction func unwindToMainViewController(_ sender: UIStoryboardSegue) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +56,11 @@ class ViewController: UIViewController {
             
             setupChart(chartView, data: data, color: colors[i % colors.count])
         }
+        // Add the pan screen edge gesture to the current view
+        flowingMenuTransitionManager.setInteractivePresentationView(view)
         
+        // Add the delegate to respond to interactive transition events
+        flowingMenuTransitionManager.delegate = self
         
     }
     
@@ -43,12 +75,14 @@ class ViewController: UIViewController {
         
         chartView.backgroundColor = color
         
+        /*
         // x-axis limit line
         let llXAxis = ChartLimitLine(limit: 10, label: "Index 10")
         llXAxis.lineWidth = 4
         llXAxis.lineDashLengths = [10, 10, 0]
         llXAxis.labelPosition = .rightBottom
         llXAxis.valueFont = .systemFont(ofSize: 10)
+        */
         
         chartView.xAxis.gridLineWidth = 0
         chartView.xAxis.gridLineDashLengths = [10, 10]
