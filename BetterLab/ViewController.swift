@@ -43,12 +43,13 @@ class ViewController: UIViewController, FlowingMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Colored Line Chart"
+        self.title = "Lighting Charts"
         
         let colors = [UIColor(red: 137/255, green: 230/255, blue: 81/255, alpha: 1),
-                      UIColor(red: 240/255, green: 240/255, blue: 30/255, alpha: 1),
                       UIColor(red: 89/255, green: 199/255, blue: 250/255, alpha: 1),
-                      UIColor(red: 250/255, green: 104/255, blue: 104/255, alpha: 1)]
+                      UIColor(red: 250/255, green: 104/255, blue: 104/255, alpha: 1),
+                      UIColor(red: 240/255, green: 240/255, blue: 30/255, alpha: 1)]
+        
         
         for (i, chartView) in chartViews.enumerated() {
             let data = dataWithCount(36, range: 100)
@@ -66,7 +67,6 @@ class ViewController: UIViewController, FlowingMenuDelegate {
     
     func setupChart(_ chartView: LineChartView, data: LineChartData, color: UIColor) {
         (data.getDataSetByIndex(0) as! LineChartDataSet).circleHoleColor = color
-        
         //chart.delegate = self
         chartView.chartDescription?.enabled = false
         chartView.dragEnabled = true
