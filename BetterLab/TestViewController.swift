@@ -10,6 +10,7 @@ import UIKit
 
 class TestViewController: UIViewController {
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var temp: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

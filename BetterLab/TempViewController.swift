@@ -10,7 +10,7 @@ import UIKit
 import Charts
 import FlowingMenu
 
-class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
+class TempViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     @IBOutlet var chartViews: [LineChartView]!
     @IBOutlet var button: UIButton!
     @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
@@ -38,7 +38,7 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
         let connection: NSURLConnection = NSURLConnection(request: request as URLRequest, delegate: self, startImmediately: false)!
         connection.start()
     }
-     func connection(_ connection: NSURLConnection, didReceive mydata: Data){
+    func connection(_ connection: NSURLConnection, didReceive mydata: Data){
         //print(mydata)
         self.mydata.append(mydata as Data)
     }
@@ -56,7 +56,7 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
             var g = line.split(separator: ",", maxSplits: 10, omittingEmptySubsequences: true)
             //Time and Value
             let x:Double = Double(g[4])! // Time
-            let y:Double = Double(g[2])! // Value
+            let y:Double = Double(g[0])! // Value
             let zone:Int = Int(g[3])!
             print(zone)
             let entry = ChartDataEntry(x: x, y: y)
@@ -81,7 +81,7 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
         datasetSetting(set: dataset1)
         print(dataset1)
         //Setup
-
+        
         
         for (i, chartView) in chartViews.enumerated() {
             var data:LineChartData
@@ -122,14 +122,14 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
     
     // MARK: - FlowingMenu Delegate Methods
     func flowingMenuNeedsPresentMenu(_ flowingMenu: FlowingMenuTransitionManager) {
-        performSegue(withIdentifier: "PresentMenuSegue", sender: self)
+        performSegue(withIdentifier: "PresentMenuSegue1", sender: self)
     }
     
     func flowingMenuNeedsDismissMenu(_ flowingMenu: FlowingMenuTransitionManager) {
-        menu?.performSegue(withIdentifier: "DismissMenuSegue", sender: self)
+        menu?.performSegue(withIdentifier: "DismissMenuSegue1", sender: self)
     }
     
-    @IBAction func unwindToTempVC(_ sender: UIStoryboardSegue) {
+    @IBAction func unwindToMainViewController(_ sender: UIStoryboardSegue) {
     }
     
     
@@ -138,9 +138,9 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
         
         //print(getJSON(urlToRequest: "http://sccug-330-03.lancs.ac.uk/webapp/gettemp"))
         
-        self.title = "Lighting Charts"
+        self.title = "Temperature Charts"
         
-
+        
         // Add the pan screen edge gesture to the current view
         flowingMenuTransitionManager.setInteractivePresentationView(view)
         
@@ -160,13 +160,13 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
         chartView.backgroundColor = color
         
         /*
-        // x-axis limit line
-        let llXAxis = ChartLimitLine(limit: 10, label: "Index 10")
-        llXAxis.lineWidth = 4
-        llXAxis.lineDashLengths = [10, 10, 0]
-        llXAxis.labelPosition = .rightBottom
-        llXAxis.valueFont = .systemFont(ofSize: 10)
-        */
+         // x-axis limit line
+         let llXAxis = ChartLimitLine(limit: 10, label: "Index 10")
+         llXAxis.lineWidth = 4
+         llXAxis.lineDashLengths = [10, 10, 0]
+         llXAxis.labelPosition = .rightBottom
+         llXAxis.valueFont = .systemFont(ofSize: 10)
+         */
         
         chartView.xAxis.gridLineWidth = 0
         chartView.xAxis.gridLineDashLengths = [10, 10]
@@ -174,17 +174,17 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
         chartView.xAxis.valueFormatter = DateValueFormatter()
         
         /*let ll1 = ChartLimitLine(limit: 150, label: "Upper Limit")
-        ll1.lineWidth = 4
-        ll1.lineDashLengths = [5, 5]
-        ll1.labelPosition = .rightTop
-        ll1.valueFont = .systemFont(ofSize: 10)
-        
-        let ll2 = ChartLimitLine(limit: -30, label: "Lower Limit")
-        ll2.lineWidth = 4
-        ll2.lineDashLengths = [5,5]
-        ll2.labelPosition = .rightBottom
-        ll2.valueFont = .systemFont(ofSize: 10)
- */
+         ll1.lineWidth = 4
+         ll1.lineDashLengths = [5, 5]
+         ll1.labelPosition = .rightTop
+         ll1.valueFont = .systemFont(ofSize: 10)
+         
+         let ll2 = ChartLimitLine(limit: -30, label: "Lower Limit")
+         ll2.lineWidth = 4
+         ll2.lineDashLengths = [5,5]
+         ll2.labelPosition = .rightBottom
+         ll2.valueFont = .systemFont(ofSize: 10)
+         */
         
         let leftAxis = chartView.leftAxis
         leftAxis.removeAllLimitLines()
@@ -206,7 +206,7 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
         chartView.data = data
         
         chartView.animate(xAxisDuration: 0.2)
-    
+        
     }
     
     func dataWithCount(_ count: Int, range: UInt32) -> LineChartData {
@@ -230,15 +230,16 @@ class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDele
     }
     
     /*func getJSON(urlToRequest: String) -> NSData{
-        return try! NSData(contentsOf: URL(string: urlToRequest)!)
-    }*/
+     return try! NSData(contentsOf: URL(string: urlToRequest)!)
+     }*/
     
     /*func parseJSON(inputData: NSData) -> NSDictionary{
-        var error: NSError?
-        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-        
-        return boardsDictionary
-    }*/
+     var error: NSError?
+     var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+     
+     return boardsDictionary
+     }*/
 }
+
 
 
