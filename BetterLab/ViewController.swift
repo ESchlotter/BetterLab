@@ -10,11 +10,62 @@ import UIKit
 import Charts
 import FlowingMenu
 
-class ViewController: UIViewController, FlowingMenuDelegate {
+class ViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     @IBOutlet var chartViews: [LineChartView]!
     @IBOutlet var button: UIButton!
     @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
     var menu: UIViewController?
+    lazy var mydata = NSMutableData()
+    
+    var zone1:[ChartDataEntry] = []
+    var zone2:[ChartDataEntry] = []
+    var zone3:[ChartDataEntry] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startConnection()
+    }
+    
+    func startConnection(){
+        print("Connected")
+        let urlPath: String = "http://sccug-330-03.lancs.ac.uk/webapp/getweather"
+        let url: NSURL = NSURL(string: urlPath)!
+        var request: NSURLRequest = NSURLRequest(url: url as URL)
+        let connection: NSURLConnection = NSURLConnection(request: request as URLRequest, delegate: self, startImmediately: false)!
+        connection.start()
+    }
+     func connection(_ connection: NSURLConnection, didReceive mydata: Data){
+        //print(mydata)
+        self.mydata.append(mydata as Data)
+    }
+    
+    func connectionDidFinishLoading(_ connection: NSURLConnection) {
+        var err: NSError
+        // throwing an error on the line below (can't figure out where the error message is)
+        //var jsonResult: NSDictionary = try! JSONSerialization.jsonObject(with: mydata as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+        //print(jsonResult)
+        let backToString: String = String(data: mydata as Data, encoding: String.Encoding.utf8) as String!
+        print(backToString)
+        //backToString.split("a:b::c:", {$0 == ":"}, maxSplit: Int.max)
+        var lines = backToString.split(separator: "\n", maxSplits: backToString.count, omittingEmptySubsequences: true)
+        for line in lines {
+            var g = line.split(separator: ",", maxSplits: 10, omittingEmptySubsequences: true)
+            //Time and Value
+            let x:Double = Double(g[4])!
+            let y:Double = Double(g[2])!
+            let zone:Int = Int(g[3])!
+            print(zone)
+            let entry = ChartDataEntry(x: x, y: y)
+            if zone == 1 {
+                zone1.append(entry)
+            } else if zone == 2 {
+                zone2.append(entry)
+            } else if zone == 3 {
+                zone3.append(entry)
+            }
+        }
+        //LineChartDataSet(values: <#T##[ChartDataEntry]?#>, label: <#T##String?#>)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc                   = segue.destination
@@ -43,13 +94,14 @@ class ViewController: UIViewController, FlowingMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //print(getJSON(urlToRequest: "http://sccug-330-03.lancs.ac.uk/webapp/gettemp"))
+        
         self.title = "Lighting Charts"
         
         let colors = [UIColor(red: 137/255, green: 230/255, blue: 81/255, alpha: 1),
                       UIColor(red: 89/255, green: 199/255, blue: 250/255, alpha: 1),
                       UIColor(red: 250/255, green: 104/255, blue: 104/255, alpha: 1),
                       UIColor(red: 240/255, green: 240/255, blue: 30/255, alpha: 1)]
-        
         
         for (i, chartView) in chartViews.enumerated() {
             let data = dataWithCount(36, range: 100)
@@ -143,6 +195,17 @@ class ViewController: UIViewController, FlowingMenuDelegate {
         
         return LineChartData(dataSet: set1)
     }
+    
+    /*func getJSON(urlToRequest: String) -> NSData{
+        return try! NSData(contentsOf: URL(string: urlToRequest)!)
+    }*/
+    
+    /*func parseJSON(inputData: NSData) -> NSDictionary{
+        var error: NSError?
+        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        
+        return boardsDictionary
+    }*/
 }
 
 
