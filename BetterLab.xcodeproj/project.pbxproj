@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0D309200FCE35272E0119D86 /* Pods_BetterLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E95112D47C55BBA50A45851 /* Pods_BetterLab.framework */; };
 		1B127CD01FC3747D009F5C54 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B127CCF1FC3747D009F5C54 /* TestViewController.swift */; };
-		1B127CD61FC51753009F5C54 /* my_logo (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 1B127CD51FC51753009F5C54 /* my_logo (1).png */; };
 		1B127CD81FC5196B009F5C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B127CD71FC5196B009F5C54 /* Assets.xcassets */; };
 		1B4DC92B1FC0C17500D7548A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DC92A1FC0C17500D7548A /* AppDelegate.swift */; };
 		1B4DC92D1FC0C17500D7548A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DC92C1FC0C17500D7548A /* ViewController.swift */; };
@@ -19,6 +18,13 @@
 		1B4DC94B1FC0C17600D7548A /* BetterLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DC94A1FC0C17600D7548A /* BetterLabUITests.swift */; };
 		1B707F331FC5F5F30009C200 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B707F321FC5F5F20009C200 /* DateValueFormatter.swift */; };
 		1B707F351FC5FF310009C200 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B707F341FC5FF310009C200 /* TempViewController.swift */; };
+		1B85F6321FC64CCB00D9DC5E /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6311FC64CCA00D9DC5E /* HostViewController.swift */; };
+		1B85F6341FC6578300D9DC5E /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6331FC6578300D9DC5E /* NavController.swift */; };
+		1B85F6361FC65B6200D9DC5E /* HumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6351FC65B6200D9DC5E /* HumViewController.swift */; };
+		1B85F6381FC6677B00D9DC5E /* mug.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85F6371FC6677B00D9DC5E /* mug.png */; };
+		1B85F63A1FC6685200D9DC5E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6391FC6685200D9DC5E /* HomeViewController.swift */; };
+		1B85F63F1FC6746F00D9DC5E /* mylogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85F63E1FC6746F00D9DC5E /* mylogo.png */; };
+		1B85F6411FC6757800D9DC5E /* TempChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6401FC6757800D9DC5E /* TempChartViewController.swift */; };
 		3CE35B2CD8BF1B2DC06672BA /* Pods_BetterLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F243D6BD715099000632C4 /* Pods_BetterLabTests.framework */; };
 		F9F352023EF6DBB73A68BCB4 /* Pods_BetterLabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +49,6 @@
 /* Begin PBXFileReference section */
 		03C50E0EB0A53662E11A7A6B /* Pods-BetterLabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLabUITests/Pods-BetterLabUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B127CCF1FC3747D009F5C54 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		1B127CD51FC51753009F5C54 /* my_logo (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_logo (1).png"; sourceTree = SOURCE_ROOT; };
 		1B127CD71FC5196B009F5C54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B4DC9271FC0C17500D7548A /* BetterLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4DC92A1FC0C17500D7548A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +64,13 @@
 		1B4DC94C1FC0C17600D7548A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B707F321FC5F5F20009C200 /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		1B707F341FC5FF310009C200 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		1B85F6311FC64CCA00D9DC5E /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HostViewController.swift; path = BetterLab/Control/HostViewController.swift; sourceTree = SOURCE_ROOT; };
+		1B85F6331FC6578300D9DC5E /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		1B85F6351FC65B6200D9DC5E /* HumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumViewController.swift; sourceTree = "<group>"; };
+		1B85F6371FC6677B00D9DC5E /* mug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mug.png; path = BetterLab/Other/mug.png; sourceTree = SOURCE_ROOT; };
+		1B85F6391FC6685200D9DC5E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1B85F63E1FC6746F00D9DC5E /* mylogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mylogo.png; sourceTree = "<group>"; };
+		1B85F6401FC6757800D9DC5E /* TempChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChartViewController.swift; sourceTree = "<group>"; };
 		4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetterLabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		533AFAD66381C28E916B13D1 /* Pods-BetterLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab.debug.xcconfig"; sourceTree = "<group>"; };
 		7DA24824967A0B188F662890 /* Pods-BetterLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,15 +135,13 @@
 		1B4DC9291FC0C17500D7548A /* BetterLab */ = {
 			isa = PBXGroup;
 			children = (
-				1B707F321FC5F5F20009C200 /* DateValueFormatter.swift */,
-				1B127CD51FC51753009F5C54 /* my_logo (1).png */,
-				1B4DC92A1FC0C17500D7548A /* AppDelegate.swift */,
-				1B4DC92C1FC0C17500D7548A /* ViewController.swift */,
+				1B85F63D1FC66F9200D9DC5E /* Other */,
+				1B85F63C1FC66F7B00D9DC5E /* Control */,
+				1B85F63B1FC66F6300D9DC5E /* ViewControllers */,
 				1B4DC92E1FC0C17500D7548A /* Main.storyboard */,
 				1B4DC9331FC0C17500D7548A /* LaunchScreen.storyboard */,
 				1B4DC9361FC0C17500D7548A /* Info.plist */,
-				1B127CCF1FC3747D009F5C54 /* TestViewController.swift */,
-				1B707F341FC5FF310009C200 /* TempViewController.swift */,
+				1B85F6401FC6757800D9DC5E /* TempChartViewController.swift */,
 			);
 			path = BetterLab;
 			sourceTree = "<group>";
@@ -152,6 +162,38 @@
 				1B4DC94C1FC0C17600D7548A /* Info.plist */,
 			);
 			path = BetterLabUITests;
+			sourceTree = "<group>";
+		};
+		1B85F63B1FC66F6300D9DC5E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B85F6391FC6685200D9DC5E /* HomeViewController.swift */,
+				1B4DC92C1FC0C17500D7548A /* ViewController.swift */,
+				1B707F341FC5FF310009C200 /* TempViewController.swift */,
+				1B85F6351FC65B6200D9DC5E /* HumViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1B85F63C1FC66F7B00D9DC5E /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				1B85F6311FC64CCA00D9DC5E /* HostViewController.swift */,
+				1B127CCF1FC3747D009F5C54 /* TestViewController.swift */,
+				1B85F6331FC6578300D9DC5E /* NavController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		1B85F63D1FC66F9200D9DC5E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1B85F6371FC6677B00D9DC5E /* mug.png */,
+				1B85F63E1FC6746F00D9DC5E /* mylogo.png */,
+				1B707F321FC5F5F20009C200 /* DateValueFormatter.swift */,
+				1B4DC92A1FC0C17500D7548A /* AppDelegate.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		94D834C5D447254E3A96A040 /* Pods */ = {
@@ -297,8 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B4DC9351FC0C17500D7548A /* LaunchScreen.storyboard in Resources */,
-				1B127CD61FC51753009F5C54 /* my_logo (1).png in Resources */,
 				1B127CD81FC5196B009F5C54 /* Assets.xcassets in Resources */,
+				1B85F6381FC6677B00D9DC5E /* mug.png in Resources */,
+				1B85F63F1FC6746F00D9DC5E /* mylogo.png in Resources */,
 				1B4DC9301FC0C17500D7548A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +506,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B4DC92D1FC0C17500D7548A /* ViewController.swift in Sources */,
+				1B85F6341FC6578300D9DC5E /* NavController.swift in Sources */,
 				1B707F351FC5FF310009C200 /* TempViewController.swift in Sources */,
+				1B85F6411FC6757800D9DC5E /* TempChartViewController.swift in Sources */,
+				1B85F6361FC65B6200D9DC5E /* HumViewController.swift in Sources */,
+				1B85F6321FC64CCB00D9DC5E /* HostViewController.swift in Sources */,
+				1B85F63A1FC6685200D9DC5E /* HomeViewController.swift in Sources */,
 				1B127CD01FC3747D009F5C54 /* TestViewController.swift in Sources */,
 				1B707F331FC5F5F30009C200 /* DateValueFormatter.swift in Sources */,
 				1B4DC92B1FC0C17500D7548A /* AppDelegate.swift in Sources */,

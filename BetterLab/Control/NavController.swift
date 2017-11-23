@@ -1,20 +1,22 @@
 //
-//  TestViewController.swift
+//  NavController.swift
 //  BetterLab
 //
-//  Created by Eduard Schlotter on 20/11/2017.
+//  Created by Eduard Schlotter on 23/11/2017.
 //  Copyright © 2017 eschlotter. All rights reserved.
 //
 
 import UIKit
+import InteractiveSideMenu
 
-class TestViewController: UIViewController {
-    @IBOutlet var backButton: UIButton!
-    @IBOutlet var temp: UIButton!
-    
+class NavController: UINavigationController,SideMenuItemContent {
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
 

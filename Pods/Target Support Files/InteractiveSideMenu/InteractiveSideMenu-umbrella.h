@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double FlowingMenuVersionNumber;
-FOUNDATION_EXPORT const unsigned char FlowingMenuVersionString[];
+FOUNDATION_EXPORT double InteractiveSideMenuVersionNumber;
+FOUNDATION_EXPORT const unsigned char InteractiveSideMenuVersionString[];
 

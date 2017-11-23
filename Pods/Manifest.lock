@@ -2,16 +2,16 @@ PODS:
   - Charts (3.0.2):
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
-  - FlowingMenu (3.0.0)
+  - InteractiveSideMenu (2.1)
 
 DEPENDENCIES:
   - Charts
-  - FlowingMenu (~> 3.0.0)
+  - InteractiveSideMenu
 
 SPEC CHECKSUMS:
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
-  FlowingMenu: 2e9a4bc7bcb746b517d71064b7a45d0caea8d6c3
+  InteractiveSideMenu: 9e3c8b004edd8b8c2ebaef2c3f0fde87c357b904
 
-PODFILE CHECKSUM: dbb06db999ef4cf3b8727e964d254a16fedc53ef
+PODFILE CHECKSUM: 7d918b3a91220baf2e888ecd72b8c59dd5a00740
 
 COCOAPODS: 1.3.0.beta.1

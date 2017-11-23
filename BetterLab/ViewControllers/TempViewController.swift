@@ -8,12 +8,10 @@
 
 import UIKit
 import Charts
-import FlowingMenu
-
-class TempViewController: UIViewController, FlowingMenuDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
+import InteractiveSideMenu
+class TempViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate{
     @IBOutlet var chartViews: [LineChartView]!
     @IBOutlet var button: UIButton!
-    @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
     var menu: UIViewController?
     lazy var mydata = NSMutableData()
     
@@ -109,43 +107,14 @@ class TempViewController: UIViewController, FlowingMenuDelegate, NSURLConnection
         set.drawValuesEnabled = true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc                   = segue.destination
-        vc.transitioningDelegate = flowingMenuTransitionManager
-        
-        // Add the left pan gesture to the menu
-        flowingMenuTransitionManager.setInteractiveDismissView(vc.view)
-        
-        // Keep a reference of the current menu
-        menu = vc
-    }
-    
-    // MARK: - FlowingMenu Delegate Methods
-    func flowingMenuNeedsPresentMenu(_ flowingMenu: FlowingMenuTransitionManager) {
-        performSegue(withIdentifier: "PresentMenuSegue1", sender: self)
-    }
-    
-    func flowingMenuNeedsDismissMenu(_ flowingMenu: FlowingMenuTransitionManager) {
-        menu?.performSegue(withIdentifier: "DismissMenuSegue1", sender: self)
-    }
-    
-    @IBAction func unwindToMainViewController(_ sender: UIStoryboardSegue) {
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.hidesBackButton = true
         //print(getJSON(urlToRequest: "http://sccug-330-03.lancs.ac.uk/webapp/gettemp"))
         
-        self.title = "Temperature Charts"
+        self.title = "Temperature Zones"
         
-        
-        // Add the pan screen edge gesture to the current view
-        flowingMenuTransitionManager.setInteractivePresentationView(view)
-        
-        // Add the delegate to respond to interactive transition events
-        flowingMenuTransitionManager.delegate = self
         
     }
     
@@ -228,17 +197,12 @@ class TempViewController: UIViewController, FlowingMenuDelegate, NSURLConnection
         
         return LineChartData(dataSet: set1)
     }
+    @IBAction func openMenu(_ sender: Any) {
+        if let navigationViewController = self.navigationController as? SideMenuItemContent {
+            navigationViewController.showSideMenu()
+        }
+    }
     
-    /*func getJSON(urlToRequest: String) -> NSData{
-     return try! NSData(contentsOf: URL(string: urlToRequest)!)
-     }*/
-    
-    /*func parseJSON(inputData: NSData) -> NSDictionary{
-     var error: NSError?
-     var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-     
-     return boardsDictionary
-     }*/
 }
 
 
