@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 import InteractiveSideMenu
-class TempViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate{
+class TempViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate, ChartViewDelegate{
     @IBOutlet var chartViews: [LineChartView]!
     @IBOutlet var button: UIButton!
     var menu: UIViewController?
@@ -120,7 +120,7 @@ class TempViewController: UIViewController, NSURLConnectionDelegate, NSURLConnec
     
     func setupChart(_ chartView: LineChartView, data: LineChartData, color: UIColor) {
         (data.getDataSetByIndex(0) as! LineChartDataSet).circleHoleColor = color
-        //chart.delegate = self
+        chartView.delegate = self
         chartView.chartDescription?.enabled = false
         chartView.dragEnabled = true
         chartView.setScaleEnabled(true)

@@ -364,6 +364,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chartView" destination="fcl-SU-HOT" id="9v8-6N-ey6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0JV-al-0Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
