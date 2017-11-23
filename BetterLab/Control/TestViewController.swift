@@ -14,7 +14,7 @@ class TestViewController: MenuViewController {
     @IBOutlet var temp: UIButton!
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        return false
     }
     
     override func viewDidLoad() {

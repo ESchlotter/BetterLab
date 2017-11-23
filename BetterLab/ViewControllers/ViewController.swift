@@ -26,6 +26,7 @@ class ViewController: UIViewController, NSURLConnectionDelegate, NSURLConnection
         zone1 = []
         zone2 = []
         zone3 = []
+        mydata = NSMutableData()
         //chartViews[0].lineData?.removeDataSetByIndex()
         startConnection()
     }
@@ -98,6 +99,7 @@ class ViewController: UIViewController, NSURLConnectionDelegate, NSURLConnection
             
             setupChart(chartView, data: data, color: colors[i % colors.count])
         }
+        connection.cancel()
     }
     func datasetSetting(set:LineChartDataSet){
         set.lineWidth = 1
@@ -178,7 +180,7 @@ class ViewController: UIViewController, NSURLConnectionDelegate, NSURLConnection
         
         chartView.data = data
         
-        chartView.animate(xAxisDuration: 0.2)
+        chartView.animate(xAxisDuration: 1)
     
     }
     

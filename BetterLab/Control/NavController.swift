@@ -11,7 +11,7 @@ import InteractiveSideMenu
 
 class NavController: UINavigationController,SideMenuItemContent {
     override var prefersStatusBarHidden: Bool {
-        return true
+        return false
     }
 
     override func viewDidLoad() {

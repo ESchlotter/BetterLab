@@ -1,5 +1,5 @@
 //
-//  TempChartViewController.swift
+//  HumChartViewController.swift
 //  BetterLab
 //
 //  Created by Eduard Schlotter on 23/11/2017.
@@ -10,7 +10,7 @@ import UIKit
 import Charts
 import InteractiveSideMenu
 
-class TempChartViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate, ChartViewDelegate {
+class HumChartViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate, ChartViewDelegate {
     
     @IBOutlet var chartView: LineChartView!
     lazy var mydata = NSMutableData()
@@ -54,7 +54,7 @@ class TempChartViewController: UIViewController, NSURLConnectionDelegate, NSURLC
             var g = line.split(separator: ",", maxSplits: 10, omittingEmptySubsequences: true)
             //Time and Value
             let x:Double = Double(g[4])! // Time
-            let y:Double = Double(g[0])! // Value
+            let y:Double = Double(g[1])! // Value
             let zone:Int = Int(g[3])!
             print(zone)
             let entry = ChartDataEntry(x: x, y: y)
@@ -99,10 +99,10 @@ class TempChartViewController: UIViewController, NSURLConnectionDelegate, NSURLC
         set.setCircleColor(.black)
         set.drawValuesEnabled = true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Temperature Chart"
+        self.title = "Humidity Chart"
         
     }
     
@@ -131,8 +131,8 @@ class TempChartViewController: UIViewController, NSURLConnectionDelegate, NSURLC
         
         let leftAxis = chartView.leftAxis
         leftAxis.labelTextColor = .black
-        leftAxis.axisMaximum = 50
-        leftAxis.axisMinimum = 0
+        //leftAxis.axisMaximum = 50
+        //leftAxis.axisMinimum = 0
         leftAxis.drawGridLinesEnabled = true
         leftAxis.granularityEnabled = true
         
@@ -158,5 +158,5 @@ class TempChartViewController: UIViewController, NSURLConnectionDelegate, NSURLC
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
+
 }

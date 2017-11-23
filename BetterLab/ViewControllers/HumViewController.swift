@@ -27,6 +27,7 @@ class HumViewController: UIViewController, NSURLConnectionDelegate, NSURLConnect
         zone2 = []
         zone3 = []
         //chartViews[0].lineData?.removeDataSetByIndex()
+        mydata = NSMutableData()
         startConnection()
     }
     
@@ -98,6 +99,7 @@ class HumViewController: UIViewController, NSURLConnectionDelegate, NSURLConnect
             
             setupChart(chartView, data: data, color: colors[i % colors.count])
         }
+        connection.cancel()
     }
     func datasetSetting(set:LineChartDataSet){
         set.lineWidth = 1
@@ -180,7 +182,7 @@ class HumViewController: UIViewController, NSURLConnectionDelegate, NSURLConnect
         
         chartView.data = data
         
-        chartView.animate(xAxisDuration: 0.2)
+        chartView.animate(xAxisDuration: 1)
         
     }
     
