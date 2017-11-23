@@ -13,17 +13,20 @@ class TempChartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationItem.hidesBackButton = true
-        navigationItem.hidesBackButton = true
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(TempChartViewController.backButtonTapped))
-        navigationItem.leftBarButtonItem?.isEnabled = false
+        self.title = "Temperature Chart"
         
-
     }
-    func backButtonTapped() {
+    @IBAction func openMenu(_ sender: Any) {
         if let navigationViewController = self.navigationController as? SideMenuItemContent {
             navigationViewController.showSideMenu()
         }
     }
-
+    @IBAction func backButton(_ sender: Any) {
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }

@@ -120,8 +120,6 @@ class ViewController: UIViewController, NSURLConnectionDelegate, NSURLConnection
         
         self.title = "Lighting Zones"
         
-        
-        
     }
     
     func setupChart(_ chartView: LineChartView, data: LineChartData, color: UIColor) {
