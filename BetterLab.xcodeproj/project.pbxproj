@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D309200FCE35272E0119D86 /* Pods_BetterLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E95112D47C55BBA50A45851 /* Pods_BetterLab.framework */; };
+		1B0899991FD1A26E00E67B25 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0899981FD1A26E00E67B25 /* ActViewController.swift */; };
 		1B127CD01FC3747D009F5C54 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B127CCF1FC3747D009F5C54 /* TestViewController.swift */; };
 		1B127CD81FC5196B009F5C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B127CD71FC5196B009F5C54 /* Assets.xcassets */; };
 		1B4DC92B1FC0C17500D7548A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DC92A1FC0C17500D7548A /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		03C50E0EB0A53662E11A7A6B /* Pods-BetterLabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLabUITests/Pods-BetterLabUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B0899981FD1A26E00E67B25 /* ActViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
 		1B127CCF1FC3747D009F5C54 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		1B127CD71FC5196B009F5C54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B4DC9271FC0C17500D7548A /* BetterLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 				1B707F341FC5FF310009C200 /* TempViewController.swift */,
 				1B85F6351FC65B6200D9DC5E /* HumViewController.swift */,
 				1B4DC92C1FC0C17500D7548A /* ViewController.swift */,
+				1B0899981FD1A26E00E67B25 /* ActViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 			files = (
 				1B4DC92D1FC0C17500D7548A /* ViewController.swift in Sources */,
 				1B85F6341FC6578300D9DC5E /* NavController.swift in Sources */,
+				1B0899991FD1A26E00E67B25 /* ActViewController.swift in Sources */,
 				1B85F6431FC6F0D300D9DC5E /* HumChartViewController.swift in Sources */,
 				1B707F351FC5FF310009C200 /* TempViewController.swift in Sources */,
 				1B85F6411FC6757800D9DC5E /* TempChartViewController.swift in Sources */,

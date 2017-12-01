@@ -9,6 +9,7 @@
 import UIKit
 import InteractiveSideMenu
 
+// Menu
 class TestViewController: MenuViewController {
     @IBOutlet var backButton: UIButton!
     @IBOutlet var temp: UIButton!
@@ -19,7 +20,6 @@ class TestViewController: MenuViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         //guard let menuContainerViewController = self.menuContainerViewController else {
           //  return
         //}
@@ -61,4 +61,12 @@ class TestViewController: MenuViewController {
         menuContainerViewController.hideSideMenu()
     }
     
+    @IBAction func actButton(_ sender: Any) {
+        guard let menuContainerViewController = self.menuContainerViewController else {
+            return
+        }
+        
+        menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[4])
+        menuContainerViewController.hideSideMenu()
+    }
 }

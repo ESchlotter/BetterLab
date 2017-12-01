@@ -67,7 +67,7 @@ class HostViewController: MenuContainerViewController, NSURLConnectionDelegate, 
     }
 
     private func contentControllers() -> [UIViewController] {
-        let controllersIdentifiers = ["HomeNav","TempNav","HumNav","LightNav"]
+        let controllersIdentifiers = ["HomeNav","TempNav","HumNav","LightNav", "ActNav"]
         var contentList = [UIViewController]()
 
         /*
