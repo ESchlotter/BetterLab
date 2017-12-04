@@ -28,7 +28,7 @@ import InteractiveSideMenu
 class HostViewController: MenuContainerViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     
     override var prefersStatusBarHidden: Bool {
-        return false
+        return true
     }
 
     override func viewDidLoad() {
