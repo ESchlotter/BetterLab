@@ -45,9 +45,6 @@ class HostViewController: MenuContainerViewController, NSURLConnectionDelegate, 
 
         // Select initial content controller. It's needed even if the first view controller should be selected.
         self.selectContentViewController(contentViewControllers.first!)
-        
-        mydata = NSMutableData()
-        startConnection()
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -81,33 +78,5 @@ class HostViewController: MenuContainerViewController, NSURLConnectionDelegate, 
 
         return contentList
     }
-    
-    lazy var mydata = NSMutableData()
-    
-    func startConnection(){
-        print("Connected")
-        let urlPath: String = "http://sccug-330-03.lancs.ac.uk/webapp/getzone"
-        let url: NSURL = NSURL(string: urlPath)!
-        let request: NSURLRequest = NSURLRequest(url: url as URL)
-        let connection: NSURLConnection = NSURLConnection(request: request as URLRequest, delegate: self, startImmediately: false)!
-        connection.start()
-    }
-    func connection(_ connection: NSURLConnection, didReceive mydata: Data){
-        self.mydata.append(mydata as Data)
-    }
-    
-    func connectionDidFinishLoading(_ connection: NSURLConnection) {
-        let err: NSError
-        // throwing an error on the line below (can't figure out where the error message is)
-        let backToString: String = String(data: mydata as Data, encoding: String.Encoding.utf8) as String!
-        //cupPercentage.text = backToString
-        print(backToString)
-        NotificationCenter.default.post(name: Notification.Name("NotificationIdentifier"), object: nil)
-        connection.cancel()
-        let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.mydata = NSMutableData()
-            self.startConnection()
-        }
-    }
+
 }

@@ -6,6 +6,7 @@ target 'BetterLab' do
   use_frameworks!
   pod 'Charts'
   pod 'InteractiveSideMenu'
+  pod 'Kingfisher'
 
   # Pods for BetterLab
 

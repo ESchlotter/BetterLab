@@ -3,15 +3,18 @@ PODS:
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
   - InteractiveSideMenu (2.1)
+  - Kingfisher (4.3.0)
 
 DEPENDENCIES:
   - Charts
   - InteractiveSideMenu
+  - Kingfisher
 
 SPEC CHECKSUMS:
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   InteractiveSideMenu: 9e3c8b004edd8b8c2ebaef2c3f0fde87c357b904
+  Kingfisher: 475df87bb7196e51a8e9a48b667a5388a4709241
 
-PODFILE CHECKSUM: 7d918b3a91220baf2e888ecd72b8c59dd5a00740
+PODFILE CHECKSUM: add5f023ab01fdfb81baeb0722c7eabc502bef89
 
 COCOAPODS: 1.3.0.beta.1
