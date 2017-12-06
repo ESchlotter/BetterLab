@@ -12,13 +12,12 @@ public struct Constants {
     
     public struct Config {
         
-        public static let twitterHandle = "FlohNetwork" //User's twitter handle without the @.
+        public static let twitterHandle = "SCC330_03" //User's twitter handle without the @.
         public static let pageCount = 10                //Count of pages loaded at a time from the api call.
         
     }
     
     public struct Twitter { //Twitter App Credentials.
-        
         public static let apiKey: String      = "Vttg7K8Uk70E1SwQddFVBZ9GO"
         public static let apiSecret: String   = "qOrHrkrCo36mNNcglAbPjwS044wNzr0zruCVvAARfYRwmlT5yb"
         

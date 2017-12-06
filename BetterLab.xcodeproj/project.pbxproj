@@ -10,7 +10,6 @@
 		0D309200FCE35272E0119D86 /* Pods_BetterLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E95112D47C55BBA50A45851 /* Pods_BetterLab.framework */; };
 		1B0899991FD1A26E00E67B25 /* ActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0899981FD1A26E00E67B25 /* ActViewController.swift */; };
 		1B127CD01FC3747D009F5C54 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B127CCF1FC3747D009F5C54 /* TestViewController.swift */; };
-		1B127CD81FC5196B009F5C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B127CD71FC5196B009F5C54 /* Assets.xcassets */; };
 		1B48A0281FD5F32A002EC932 /* TweetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48A0271FD5F32A002EC932 /* TweetsView.swift */; };
 		1B48A02A1FD5F4F7002EC932 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48A0291FD5F4F7002EC932 /* TweetViewModel.swift */; };
 		1B48A0441FD5F687002EC932 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48A03D1FD5F686002EC932 /* Constants.swift */; };
@@ -35,6 +34,8 @@
 		1B85F6411FC6757800D9DC5E /* TempChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6401FC6757800D9DC5E /* TempChartViewController.swift */; };
 		1B85F6431FC6F0D300D9DC5E /* HumChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6421FC6F0D300D9DC5E /* HumChartViewController.swift */; };
 		1B85F6451FC6F66600D9DC5E /* LightChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6441FC6F66600D9DC5E /* LightChartViewController.swift */; };
+		1BA917561FD83C7A00920CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA917551FD83C7900920CAD /* Assets.xcassets */; };
+		1BA9175A1FD83D0E00920CAD /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA917591FD83D0E00920CAD /* user.png */; };
 		3CE35B2CD8BF1B2DC06672BA /* Pods_BetterLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F243D6BD715099000632C4 /* Pods_BetterLabTests.framework */; };
 		F9F352023EF6DBB73A68BCB4 /* Pods_BetterLabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,7 +61,6 @@
 		03C50E0EB0A53662E11A7A6B /* Pods-BetterLabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLabUITests/Pods-BetterLabUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B0899981FD1A26E00E67B25 /* ActViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActViewController.swift; sourceTree = "<group>"; };
 		1B127CCF1FC3747D009F5C54 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		1B127CD71FC5196B009F5C54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B48A0271FD5F32A002EC932 /* TweetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsView.swift; sourceTree = "<group>"; };
 		1B48A0291FD5F4F7002EC932 /* TweetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		1B48A03D1FD5F686002EC932 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 		1B85F6401FC6757800D9DC5E /* TempChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChartViewController.swift; sourceTree = "<group>"; };
 		1B85F6421FC6F0D300D9DC5E /* HumChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumChartViewController.swift; sourceTree = "<group>"; };
 		1B85F6441FC6F66600D9DC5E /* LightChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightChartViewController.swift; sourceTree = "<group>"; };
+		1BA917551FD83C7900920CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BetterLab/Assets.xcassets; sourceTree = "<group>"; };
+		1BA917591FD83D0E00920CAD /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = BetterLab/user.png; sourceTree = SOURCE_ROOT; };
 		4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetterLabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		533AFAD66381C28E916B13D1 /* Pods-BetterLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab.debug.xcconfig"; sourceTree = "<group>"; };
 		7DA24824967A0B188F662890 /* Pods-BetterLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +152,7 @@
 		1B4DC91E1FC0C17500D7548A = {
 			isa = PBXGroup;
 			children = (
-				1B127CD71FC5196B009F5C54 /* Assets.xcassets */,
+				1BA917551FD83C7900920CAD /* Assets.xcassets */,
 				1B4DC9291FC0C17500D7548A /* BetterLab */,
 				1B4DC93E1FC0C17600D7548A /* BetterLabTests */,
 				1B4DC9491FC0C17600D7548A /* BetterLabUITests */,
@@ -235,6 +237,7 @@
 		1B85F63D1FC66F9200D9DC5E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				1BA917591FD83D0E00920CAD /* user.png */,
 				1B85F6371FC6677B00D9DC5E /* mug.png */,
 				1B85F63E1FC6746F00D9DC5E /* mylogo.png */,
 				1B707F321FC5F5F20009C200 /* DateValueFormatter.swift */,
@@ -386,9 +389,10 @@
 			files = (
 				1B4DC9351FC0C17500D7548A /* LaunchScreen.storyboard in Resources */,
 				1B48A0491FD5F687002EC932 /* TweetTableViewCell.xib in Resources */,
-				1B127CD81FC5196B009F5C54 /* Assets.xcassets in Resources */,
 				1B85F6381FC6677B00D9DC5E /* mug.png in Resources */,
 				1B85F63F1FC6746F00D9DC5E /* mylogo.png in Resources */,
+				1BA9175A1FD83D0E00920CAD /* user.png in Resources */,
+				1BA917561FD83C7A00920CAD /* Assets.xcassets in Resources */,
 				1B4DC9301FC0C17500D7548A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

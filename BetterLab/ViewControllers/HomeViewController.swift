@@ -11,12 +11,86 @@ import InteractiveSideMenu
 
 class HomeViewController: UIViewController,NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     
-    @IBOutlet var cups: UILabel!
     @IBOutlet var views: [UIView]!
     @IBOutlet var users: [UILabel]!
-    @IBOutlet var cupPercentage: UILabel!
-    var lastPercentage:String = ""
-    var numOfCups = -1
+    @IBOutlet var personImages: [UIImageView]!
+    
+    lazy var zoneData = NSMutableData()
+    
+    let urlPath: String = "http://sccug-330-03.lancs.ac.uk/webapp/getdoor"
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        zoneData = NSMutableData()
+        startZoneConnection()
+    }
+    
+    func startZoneConnection(){
+        print("Zone Connected")
+        let url: NSURL = NSURL(string: urlPath)!
+        let request: NSURLRequest = NSURLRequest(url: url as URL)
+        let connection: NSURLConnection = NSURLConnection(request: request as URLRequest, delegate: self, startImmediately: false)!
+        connection.start()
+        
+        // same thing again but for zones
+    }
+    
+    func connection(_ connection: NSURLConnection, didReceive mydata: Data){
+        self.zoneData = NSMutableData()
+        self.zoneData.append(mydata as Data)
+    }
+    
+    func connectionDidFinishLoading(_ connection: NSURLConnection) {
+        // Figure out which finished again
+        // Restart whichever needs it
+        let err: NSError
+        // throwing an error on the line below (can't figure out where the error message is)
+        let backToString: String = String(data: zoneData as Data, encoding: String.Encoding.utf8) as String!
+        switch backToString {
+        case "zone1A":
+            resetZones()
+            users[0].text = "1"
+            personImages[0].isHidden = false
+        case "zone1B":
+            resetZones()
+            users[1].text = "1"
+            personImages[1].isHidden = false
+        case "zone2A":
+            resetZones()
+            users[2].text = "1"
+            personImages[2].isHidden = false
+        case "zone2B":
+            resetZones()
+            users[3].text = "1"
+            personImages[3].isHidden = false
+        case "zone3A":
+            resetZones()
+            users[4].text = "1"
+            personImages[4].isHidden = false
+        case "zone3B":
+            resetZones()
+            users[5].text = "1"
+            personImages[5].isHidden = false
+        default:
+            print("Format Error")
+            resetZones()
+        }
+        connection.cancel()
+        let when = DispatchTime.now() + 1 // change 1 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.zoneData = NSMutableData()
+            self.startZoneConnection()
+        }
+        
+    }
+    func resetZones(){
+        for user in users{
+            user.text = "0"
+        }
+        for x in personImages{
+            x.isHidden = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
