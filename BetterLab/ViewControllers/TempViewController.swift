@@ -104,7 +104,7 @@ class TempViewController: UIViewController, NSURLConnectionDelegate, NSURLConnec
         set.circleHoleRadius = 5.0
         set.setColor(.white)
         set.setCircleColor(.white)
-        set.highlightColor = .white
+        set.highlightColor = .black
         set.drawValuesEnabled = true
     }
     
@@ -193,7 +193,7 @@ class TempViewController: UIViewController, NSURLConnectionDelegate, NSURLConnec
         set1.circleHoleRadius = 2.5
         set1.setColor(.white)
         set1.setCircleColor(.white)
-        set1.highlightColor = .white
+        set1.highlightColor = .black
         set1.drawValuesEnabled = true
         
         return LineChartData(dataSet: set1)

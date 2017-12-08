@@ -7,6 +7,7 @@ target 'BetterLab' do
   pod 'Charts'
   pod 'InteractiveSideMenu'
   pod 'Kingfisher'
+  pod 'SwiftSocket'
 
   # Pods for BetterLab
 

@@ -12,7 +12,7 @@ public struct Constants {
     
     public struct Config {
         
-        public static let twitterHandle = "SCC330_03" //User's twitter handle without the @.
+        public static let twitterHandle = "SSC_Better_Lab" //User's twitter handle without the @.
         public static let pageCount = 10                //Count of pages loaded at a time from the api call.
         
     }

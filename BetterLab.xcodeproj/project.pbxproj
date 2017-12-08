@@ -36,6 +36,8 @@
 		1B85F6451FC6F66600D9DC5E /* LightChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85F6441FC6F66600D9DC5E /* LightChartViewController.swift */; };
 		1BA917561FD83C7A00920CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA917551FD83C7900920CAD /* Assets.xcassets */; };
 		1BA9175A1FD83D0E00920CAD /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA917591FD83D0E00920CAD /* user.png */; };
+		1BA9175E1FD966EA00920CAD /* HydraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9175D1FD966EA00920CAD /* HydraViewController.swift */; };
+		1BA917601FD96FAD00920CAD /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9175F1FD96FAD00920CAD /* DayAxisValueFormatter.swift */; };
 		3CE35B2CD8BF1B2DC06672BA /* Pods_BetterLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F243D6BD715099000632C4 /* Pods_BetterLabTests.framework */; };
 		F9F352023EF6DBB73A68BCB4 /* Pods_BetterLabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,8 @@
 		1B85F6441FC6F66600D9DC5E /* LightChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightChartViewController.swift; sourceTree = "<group>"; };
 		1BA917551FD83C7900920CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BetterLab/Assets.xcassets; sourceTree = "<group>"; };
 		1BA917591FD83D0E00920CAD /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = BetterLab/user.png; sourceTree = SOURCE_ROOT; };
+		1BA9175D1FD966EA00920CAD /* HydraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydraViewController.swift; sourceTree = "<group>"; };
+		1BA9175F1FD96FAD00920CAD /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		4845200D97B7452D97404FD6 /* Pods_BetterLabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetterLabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		533AFAD66381C28E916B13D1 /* Pods-BetterLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab.debug.xcconfig"; sourceTree = "<group>"; };
 		7DA24824967A0B188F662890 /* Pods-BetterLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetterLab/Pods-BetterLab.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		1B4DC9291FC0C17500D7548A /* BetterLab */ = {
 			isa = PBXGroup;
 			children = (
+				1BA9175F1FD96FAD00920CAD /* DayAxisValueFormatter.swift */,
 				1B48A0401FD5F686002EC932 /* Tweet.swift */,
 				1B48A03C1FD5F686002EC932 /* Util */,
 				1B48A0411FD5F686002EC932 /* Views */,
@@ -182,6 +187,7 @@
 				1B85F63D1FC66F9200D9DC5E /* Other */,
 				1B85F63C1FC66F7B00D9DC5E /* Control */,
 				1B85F63B1FC66F6300D9DC5E /* ViewControllers */,
+				1BA9175D1FD966EA00920CAD /* HydraViewController.swift */,
 				1B4DC92E1FC0C17500D7548A /* Main.storyboard */,
 				1B4DC9331FC0C17500D7548A /* LaunchScreen.storyboard */,
 				1B4DC9361FC0C17500D7548A /* Info.plist */,
@@ -567,10 +573,12 @@
 				1B48A0441FD5F687002EC932 /* Constants.swift in Sources */,
 				1B48A0281FD5F32A002EC932 /* TweetsView.swift in Sources */,
 				1B85F6361FC65B6200D9DC5E /* HumViewController.swift in Sources */,
+				1BA9175E1FD966EA00920CAD /* HydraViewController.swift in Sources */,
 				1B48A0451FD5F687002EC932 /* APIController.swift in Sources */,
 				1B85F6451FC6F66600D9DC5E /* LightChartViewController.swift in Sources */,
 				1B85F6321FC64CCB00D9DC5E /* HostViewController.swift in Sources */,
 				1B85F63A1FC6685200D9DC5E /* HomeViewController.swift in Sources */,
+				1BA917601FD96FAD00920CAD /* DayAxisValueFormatter.swift in Sources */,
 				1B127CD01FC3747D009F5C54 /* TestViewController.swift in Sources */,
 				1B707F331FC5F5F30009C200 /* DateValueFormatter.swift in Sources */,
 				1B48A0471FD5F687002EC932 /* Tweet.swift in Sources */,

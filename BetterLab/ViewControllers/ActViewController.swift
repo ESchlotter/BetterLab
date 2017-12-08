@@ -8,19 +8,25 @@
 
 import UIKit
 import InteractiveSideMenu
+import SwiftSocket
 
 class ActViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     @IBOutlet var cups: UILabel!
     @IBOutlet var cupPercentage: UILabel!
     @IBOutlet var labUsers: UILabel!
+    @IBOutlet var kettleTemp: UILabel!
     var lastPercentage:String = ""
     var numOfCups = -1
     
     lazy var cupData = NSMutableData()
     lazy var peopleData = NSMutableData()
+    lazy var kettleData = NSMutableData()
     
+    let kettleUrlPath: String = "http://sccug-330-03.lancs.ac.uk/webapp/getkettle"
     let doorUrlPath: String = "http://sccug-330-03.lancs.ac.uk/webapp/getdoor"
     let cupUrlPath: String = "http://sccug-330-03.lancs.ac.uk/webapp/getper"
+    
+    let client = TCPClient(address: "192.168.0.103", port: 2000)
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,6 +34,19 @@ class ActViewController: UIViewController, NSURLConnectionDelegate, NSURLConnect
         startCupConnection()
         peopleData = NSMutableData()
         startDoorConnection()
+        kettleData = NSMutableData()
+        startKettleConnection()
+    }
+    
+    func startKettleConnection(){
+        print("Kettle Connected")
+        
+        let url: NSURL = NSURL(string: kettleUrlPath)!
+        let request: NSURLRequest = NSURLRequest(url: url as URL)
+        let connection: NSURLConnection = NSURLConnection(request: request as URLRequest, delegate: self, startImmediately: false)!
+        connection.start()
+        
+        // same thing again but for zones
     }
     
     func startCupConnection(){
@@ -54,9 +73,12 @@ class ActViewController: UIViewController, NSURLConnectionDelegate, NSURLConnect
         if(connection.currentRequest.description == cupUrlPath){
             self.cupData = NSMutableData()
             self.cupData.append(mydata as Data)
-        } else {
+        } else if (connection.currentRequest.description == doorUrlPath){
             self.peopleData = NSMutableData()
             self.peopleData.append(mydata as Data)
+        } else if (connection.currentRequest.description == kettleUrlPath){
+            self.kettleData = NSMutableData()
+            self.kettleData.append(mydata as Data)
         }
         // check which connection
         // connection.currentRequest == original?
@@ -87,7 +109,7 @@ class ActViewController: UIViewController, NSURLConnectionDelegate, NSURLConnect
                 self.cupData = NSMutableData()
                 self.startCupConnection()
             }
-        }else{
+        }else if (connection.currentRequest.description == doorUrlPath){
             let backToString: String = String(data: peopleData as Data, encoding: String.Encoding.utf8) as String!
             labUsers.text = backToString
             connection.cancel()
@@ -95,6 +117,15 @@ class ActViewController: UIViewController, NSURLConnectionDelegate, NSURLConnect
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.peopleData = NSMutableData()
                 self.startDoorConnection()
+            }
+        }else if (connection.currentRequest.description == kettleUrlPath){
+            let backToString: String = String(data: kettleData as Data, encoding: String.Encoding.utf8) as String!
+            kettleTemp.text = backToString + " °C"
+            connection.cancel()
+            let when = DispatchTime.now() + 1 // change 1 to desired number of seconds
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.kettleData = NSMutableData()
+                self.startKettleConnection()
             }
         }
         
@@ -107,6 +138,23 @@ class ActViewController: UIViewController, NSURLConnectionDelegate, NSURLConnect
     @IBAction func openMenu(_ sender: Any) {
         if let navigationViewController = self.navigationController as? SideMenuItemContent {
             navigationViewController.showSideMenu()
+        }
+    }
+    @IBAction func kettleOn(_ sender: Any) {
+        print("kettleOn")
+        DispatchQueue.main.async {
+            // Create a socket connect to www.apple.com and port at 80
+            switch self.client.connect(timeout: 10) {
+            case .success:
+                let resp = self.client.send(string: "set sys output 0x4\n")
+                print(resp)
+                self.kettleTemp.text = "On"
+                self.client.close()
+            // Connection successful
+            case .failure(let error):
+                print("failed")
+                print(error)
+            }
         }
     }
 }

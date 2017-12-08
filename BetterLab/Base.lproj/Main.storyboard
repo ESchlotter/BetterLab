@@ -935,16 +935,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kettle" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-40-EUs">
-                                <rect key="frame" x="-4" y="106" width="225" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="Xec-Tp-3Qb">
                                 <rect key="frame" x="-59" y="480" width="325" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoC-BN-Ud9">
+                                <rect key="frame" x="0.0" y="64" width="228" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="kettle">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="kettleOn:" destination="fNZ-A7-ddc" eventType="touchUpInside" id="Brm-aa-W40"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lab Activity" id="e37-Ug-Nok">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="wfc-pP-j4R">
@@ -964,6 +972,7 @@
                     <connections>
                         <outlet property="cupPercentage" destination="0sN-Yd-610" id="EYr-ol-3lq"/>
                         <outlet property="cups" destination="x0D-b1-yxl" id="uGW-yh-N2d"/>
+                        <outlet property="kettleTemp" destination="wBH-NZ-Xn7" id="N9E-cE-s83"/>
                         <outlet property="labUsers" destination="upL-Cv-7qg" id="Zhc-m8-uYq"/>
                     </connections>
                 </viewController>
@@ -991,6 +1000,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsy-w2-y9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1175" y="2034"/>
+        </scene>
+        <!--Nav Controller-->
+        <scene sceneID="gPc-vp-fUC">
+            <objects>
+                <navigationController storyboardIdentifier="HydraNav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dMR-Ri-lhu" customClass="NavController" customModule="BetterLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1fA-IX-zFR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" red="0.19564285870000001" green="0.39651337269999998" blue="0.40577507019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fgc-kP-4zo" kind="relationship" relationship="rootViewController" id="zTe-HM-Pdz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daV-nf-Eoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175" y="2980"/>
+        </scene>
+        <!--Hydra View Controller-->
+        <scene sceneID="QbS-eY-kgT">
+            <objects>
+                <viewController storyboardIdentifier="Hydra VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fgc-kP-4zo" customClass="HydraViewController" customModule="BetterLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RnG-PI-3Cm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tml-x9-ag2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3g1-0u-KlT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgN-5a-xwJ" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="372" width="375" height="295"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cgN-5a-xwJ" firstAttribute="top" secondItem="RnG-PI-3Cm" secondAttribute="bottom" constant="308" id="0kM-EO-eP6"/>
+                            <constraint firstAttribute="trailing" secondItem="cgN-5a-xwJ" secondAttribute="trailing" id="DFE-gT-5ze"/>
+                            <constraint firstItem="cgN-5a-xwJ" firstAttribute="bottom" secondItem="Tml-x9-ag2" secondAttribute="top" id="mZx-WI-SJx"/>
+                            <constraint firstItem="cgN-5a-xwJ" firstAttribute="leading" secondItem="3g1-0u-KlT" secondAttribute="leading" id="vLc-Tc-QT0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5gc-2R-u7u">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="4kT-oB-x1J">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wfr-JD-pDc">
+                                <rect key="frame" x="16" y="4" width="46" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" red="0.19564285870000001" green="0.39651337269999998" blue="0.40577507019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMenu:" destination="fgc-kP-4zo" eventType="touchUpInside" id="Odp-cB-FkF"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barChartView" destination="cgN-5a-xwJ" id="xWf-gM-jPc"/>
+                        <outlet property="button" destination="wfr-JD-pDc" id="X4t-hF-udB"/>
+                        <outletCollection property="chartViews" destination="cgN-5a-xwJ" collectionClass="NSMutableArray" id="TnL-3w-pFl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCB-hl-38e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.399999999999999" y="2979.7601199400301"/>
         </scene>
     </scenes>
     <resources>

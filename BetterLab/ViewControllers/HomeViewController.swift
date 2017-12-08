@@ -17,7 +17,7 @@ class HomeViewController: UIViewController,NSURLConnectionDelegate, NSURLConnect
     
     lazy var zoneData = NSMutableData()
     
-    let urlPath: String = "http://sccug-330-03.lancs.ac.uk/webapp/getdoor"
+    let urlPath: String = "http://sccug-330-03.lancs.ac.uk/webapp/getzone"
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
